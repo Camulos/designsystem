@@ -961,7 +961,7 @@
     }
   },
   "base_spacing": {
-    "value": "0.25rem",
+    "value": "0.25",
     "type": "spacing",
     "description": "4px"
   },
@@ -1043,7 +1043,7 @@
     }
   },
   "base_sizing": {
-    "value": "0.25rem",
+    "value": "0.25",
     "type": "sizing",
     "description": "4px"
   },
