@@ -4,7 +4,7 @@ import { TokenList } from '../../../components/Tokens/TokenList';
 
 <Meta
   title='Typografi'
-  description='Beskrivelse'
+  description='For å presentere innholdet korrekt bruker vi stiler og komponenter for typografi.'
 />
 
 export default ({ children, menu }) => (
@@ -12,12 +12,43 @@ export default ({ children, menu }) => (
     content={children}
     data={{
       title: 'Typografi',
-      date: '17. april 2023',
+      date: '30. mai 2023',
     }}
   />
 );
 
-For å presentere tekst på korrekt måte er det laget stiler som har ulike kombinasjoner av størrelse, fontvekt og linjehøyde. ⚠️ Det skal også lages et sett med komponenter som wrapper typografi-stilene og har innebygd spacing. Disse er foreløpig kun tilgjengelige i Figma, ikke som react-komponenter.
+For å presentere tekst på korrekt måte er det laget stiler som har ulike kombinasjoner av størrelse, fontvekt og linjehøyde. Det er også laget et sett med [typografi-komponenter](https://digdir.github.io/designsystem/?path=/docs/kjernekomponenter-typography--docs) som wrapper typografi-stilene og har innebygd spacing.
+
+## Font-family
+
+```css
+font-family: 'Inter', Arial, Helvetica, sans-serif;
+```
+
+Font-family er ikke en del av designsystem-biblioteket, du må selv importere ønsket font i din app. Vi anbefaler å bruke fonten Inter da det er denne fonten komponentene i designsystemet har blitt designet og testet med. Inter er en skrifttype spesielt designet for god lesbarhet på dataskjermer. Den oppfyller følgende kriterier:
+
+- SIL Open font license + har et aktivt community
+- Stor skriftfamilie (light, regular, italic, bold, semibold)
+- Gjenkjennelige bokstaver, tall og spesialtegn (ikke for kreativ)
+- Synlig forskjell på lignende tegn (I, l, 1) (må aktiveres)
+- Åpne bokstaver gror ikke igjen (f.eks tegn som a, e og c)
+- Lik strektykkelse i overgangene.
+- Tydelige overlengder og underlengde på bokstavene.
+- Tabular numbers (monospace)
+- Variabel font ([Les mer](https://fonts.google.com/knowledge/glossary/variable_fonts))
+- God bokstav og ordmellomrom
+- Språkstøtte
+
+Fonten er tilgjengelig i Figma, uten at du trenger å laste ned og installere den selv. Trenger du den til andre formål kan du laste den ned fra [github.com/rsms/inter](https://github.com/rsms/inter/releases/tag/v3.19).
+
+For hosting kan Altinns CDN benyttes:
+
+```html
+<link
+  rel="stylesheet"
+  href="https://altinncdn.no/fonts/inter/inter.css"
+/>
+```
 
 ## Størrelser
 
